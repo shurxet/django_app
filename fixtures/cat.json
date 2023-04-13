@@ -1,0 +1,82 @@
+[
+  {
+    "model": "treemenu.category",
+    "pk": 1,
+    "fields": {
+      "title": "category 1 for menu 1",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 2,
+    "fields": {
+      "title": "category 2 for menu 1",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 3,
+    "fields": {
+      "title": "category 3 for menu 1",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 4,
+    "fields": {
+      "title": "category 4 for menu 1",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 5,
+    "fields": {
+      "title": "category 5 for menu 1",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 6,
+    "fields": {
+      "title": "category 1 for menu 2",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 7,
+    "fields": {
+      "title": "category 2 for menu 2",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 8,
+    "fields": {
+      "title": "category 3 for menu 2",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 9,
+    "fields": {
+      "title": "category 4 for menu 2",
+      "url": "#"
+    }
+  },
+    {
+    "model": "treemenu.category",
+    "pk": 10,
+    "fields": {
+      "title": "category 5 for menu 2",
+      "url": "#"
+    }
+  }
+]

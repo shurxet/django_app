@@ -1,0 +1,49 @@
+version: '2.17.2'
+
+services:
+  postgres:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  migrations:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shurxet/django_treemenu
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: python manage.py migrate
+
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shurxet/django_treemenu
+    volumes:
+      - ./:/app/.
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrations:
+        condition: service_completed_successfully
+    ports:
+      - "80:8000"
+    restart: always
+    command: |
+      python manage.py runserver 0.0.0.0:8000

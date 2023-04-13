@@ -1,0 +1,5 @@
+.idea/
+postgres_data/
+venv/
+.*_cache/
+__pycache__
